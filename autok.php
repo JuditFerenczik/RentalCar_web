@@ -2,14 +2,14 @@
  require_once './response.php'; 
   ?>
 
-<div class="container-fluid" style="width:50%;">
+<div class="container-fluid" >
 <div class="row">
     
         <?php
        for($i = 0;$i < count($djson);$i++){
            echo '<div class="col-lg-3 col-sm-6 col-xs-6 col-md-4 ">';
            echo '<div class="card ">';
-           echo '<div class="card-body mycard">';
+           echo '<div class="card-body  mycard">';
        //    $neme = $djson[$i]['nem'] =="ffi" ? "imgffi" : "imgNo";
            $file = "./images/" . strtolower($djson[$i]["marka"]) . "_". strtolower($djson[$i]["model"]) . ".png";
          //  $alt_file ="./images/" . $neme . ".png";
@@ -36,7 +36,7 @@
       // echo "<p>" . $djson[$i]['szuletett'].  "</p>";
 
        echo "<p class='card-text'> " . $djson[$i]['model']. "</p>";
-       echo '<a href="./befizetes.php?id='.$tagid .'"class=" btn btn-sm btn-primary kolcs">Kölcsönzöm</a>';
+       echo '<p class="card-text "><a href="./befizetes.php?id='.$tagid .'"class=" btn btn-sm btn-primary kolcs">Kölcsönzöm</a></p>';
 
        echo " </div></div></div>";}
         ?>
